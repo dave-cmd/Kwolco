@@ -15,21 +15,23 @@ for notes on deploying the project on a live system.
 ### Installing
 
 Clone the repository:
-git clone "https://github.com/dave-cmd/Kwolco"
+`    git clone "https://github.com/dave-cmd/Kwolco"`
 
 Navigate into the working directory:
+
 contents -> Directories = [ApolloServer, Client]
 -> Files [requirements.txt, scrapper.py, pipeline.py, JumiaPipeline.ipynb]
 
 Python3 - Create a virtual environment and run [ pipenv shell ] or [ python3 -m venv venv ] - Install python dependancies [ pip install -r requirements.txt ]
-
+`$ pip install -r requirements.txt`
 Docker - Install docker container runtime
 
 Node - Install node
 
 ## Execution steps
 
-1. Run the web scapper by runnning [python3 scrapper], a scrapped_data.py will be generated in the current directory
+1. Run the web scapper by runnning [python3 scrapper.py], a scrapped_data.py will be generated in the current directory.
+   `$ python3 scrapper.py`
 
 2. Create a postgres docker container by running :
    `$docker run -it \
@@ -46,7 +48,7 @@ postgres:13
    `$ cd ApolloServer`
    ` $ npm install`
    `$ npm start
- `
+`
    This creates a table in the postgres database "jumia" and a table named "product"
 
 5. Run the pipeline.py file -
