@@ -3,8 +3,7 @@
 ## Getting Started
 
 These instructions will give you a copy of the project up and running on
-your local machine for development and testing purposes. See deployment
-for notes on deploying the project on a live system.
+your local machine for development purposes.
 
 ### Prerequisites
 
@@ -22,7 +21,7 @@ Navigate into the working directory:
 contents -> Directories = [ApolloServer, Client]
 -> Files [requirements.txt, scrapper.py, pipeline.py, JumiaPipeline.ipynb]
 
-Python3 - Create a virtual environment and run [ pipenv shell ] or [ python3 -m venv venv ] - Install python dependancies [ pip install -r requirements.txt ]
+Python3 - Create a virtual environment and run [ `$ pipenv shell` ] or [ `$ python3 -m venv venv` ] - Install python dependancies [ pip install -r requirements.txt ]
 `$ pip install -r requirements.txt`
 Docker - Install docker container runtime
 
