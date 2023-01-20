@@ -32,24 +32,39 @@ Node - Install node
 1. Run the web scapper by runnning [python3 scrapper], a scrapped_data.py will be generated in the current directory
 
 2. Create a postgres docker container by running :
-   `docker run -it \
-        -e POSTGRES_USER="root" \
-        -e POSTGRES_PASSWORD="root" \
-        -e POSTGRES_DB="jumia" \
-        -v $(pwd)/jumia_postgres_data:/var/lib/postgresql/data \
-        -p 5432:5432 \
-        postgres:13
-    `
-3. Run docker ps [ A postgresql container running on port 5432 ]
+   `$docker run -it \
+-e POSTGRES_USER="root" \
+-e POSTGRES_PASSWORD="root" \
+-e POSTGRES_DB="jumia" \
+-v $(pwd)/jumia_postgres_data:/var/lib/postgresql/data \
+-p 5432:5432 \
+postgres:13
+`
+3. Run [ A postgresql container running on port 5432 ]
+   `$docker ps `
+4. Run the ApolloServer:
+   `$ cd ApolloServer`
+   ` $ npm install`
+   `$ npm start
+ `
+   This creates a table in the postgres database "jumia" and a table named "product"
 
-4. Run the ApolloServer: - cd ApolloServer, - npm install, - npm start,
-   This create a table in the postgres database "jumia" and a table named "product"
-
-5. Run the pipeline.py file - python3 pipeline.py
-   OR - run jupyter notebook, select the JumiaPipeline.ipynb file and run the cells
+5. Run the pipeline.py file -
+   `$ python3 pipeline.py
+ `
+   OR - run
+   `jupyter notebook
+`
+   select the JumiaPipeline.ipynb file and run the cells
    The pipeline cleans and writes the scrapped data in postgres database "jumia" in a table name "product"
 
-6. Run the react Client - cd Clinet - npm install - npm start
+6. Run the react Client -
+   `$ cd Clinet
+`
+   `$ npm install
+`
+   `$ npm start
+`
 
 ## Author
 
