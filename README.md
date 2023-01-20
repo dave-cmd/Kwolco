@@ -32,15 +32,15 @@ Node - Install node
 1. Run the web scapper by runnning [python3 scrapper], a scrapped_data.py will be generated in the current directory
 
 2. Create a postgres docker container by running :
-   docker run -it \
-    -e POSTGRES_USER="root" \
-    -e POSTGRES_PASSWORD="root" \
-    -e POSTGRES_DB="jumia" \
-    -v $(pwd)/jumia_postgres_data:/var/lib/postgresql/data \
-    -p 5432:5432 \
-    postgres:13
-
-3. Run docker ps [ A postgre container running on port 5432 ]
+   `docker run -it \
+        -e POSTGRES_USER="root" \
+        -e POSTGRES_PASSWORD="root" \
+        -e POSTGRES_DB="jumia" \
+        -v $(pwd)/jumia_postgres_data:/var/lib/postgresql/data \
+        -p 5432:5432 \
+        postgres:13
+    `
+3. Run docker ps [ A postgresql container running on port 5432 ]
 
 4. Run the ApolloServer: - cd ApolloServer, - npm install, - npm start,
    This create a table in the postgres database "jumia" and a table named "product"
