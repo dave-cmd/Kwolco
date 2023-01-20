@@ -49,7 +49,7 @@ Node - Install node
    OR - run jupyter notebook, select the JumiaPipeline.ipynb file and run the cells
    The pipeline cleans and writes the scrapped data in postgres database "jumia" in a table name "product"
 
-6. Run the react Client - cd Clinet, - npm install - npm start
+6. Run the react Client - cd Clinet - npm install - npm start
 
 ## Author
 
